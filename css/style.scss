@@ -1,0 +1,167 @@
+@import	"_normalize", "_general";
+
+/* ------------------------------------------------------------------------ */
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font: 110% $font_site1;
+    color: $text_color;
+    background-color: $blanco;
+}
+
+figure{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+a, .btn{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+strong{
+    color: $rosa;
+}
+
+img{
+    max-width: 100%;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.full{
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.wrap{
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    text-align: center;
+}
+
+@import	"_loader", "_menu";
+
+.entry{
+    padding: 280px 0;
+    text-align: center;
+    color: $blanco;
+    background-color: $rosa;
+
+    & h1{
+        font: 240% $font_site2;
+    }
+
+    & p{
+        margin-bottom: 40px;
+    }
+
+    & a{
+        padding: 10px 30px;
+        color: $rosa;
+        background-color: $blanco;
+    }
+}
+
+.cuerpo > .full{
+    padding: 75px 0;
+}
+
+.BtnContainer{
+    padding: 75px 0;
+}
+
+
+.btn{
+    margin: 0 5px;
+    padding: 8px 12px;
+    font: 14pt $font_site1;
+    color: $text_color;
+    background-color: $blanco;
+}
+.btn:hover, .btn.active, .load{
+    color: $blanco;
+    background-color: $rosa;
+}
+
+.load:hover, .entry a:hover{
+    background-color: $text_color;
+}
+
+.column{
+    display: none;
+    transition: all 0.4s;
+}
+
+.container{
+    margin-bottom: 40px;
+    column-count: 3;
+    column-gap: 10px;
+    transition: all 0.3s;
+
+    &.una{
+        column-count: 1;
+
+        & img{
+            display: inline-flex;
+        }
+    }    
+}
+
+figure{
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+
+    & > img{
+        grid-row: 1 / -1;
+        grid-column: 1;
+    }
+
+    & a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+footer{
+    padding: 70px 0;
+    columns: #c2cfd7;
+    text-align: center;
+
+    & p {
+        padding-bottom: 40px;
+    }
+
+    & a{
+        padding: 5px 7px;
+    }
+}
+
+@import	"_responsive";

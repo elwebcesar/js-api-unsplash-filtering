@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba - César Fernández</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+  <script src="./js/api_json.js"></script>
+  <script src="./js/interface.js"></script>
+</head>
+<body>
+  <header class="header full">
+    <div class="wrap">
+      <div class="full">
+        <a href="#"><img src="./img/sneak.png" alt="logo sneak"></a>
+
+        <button id="hamburger-box" class="hamburger-box" onclick="menuVer()">
+          <div class="hamburger-inner"></div>
+        </button>
+        <nav class="topnav" id="topnav">
+          <ul>
+            <li><a href="#" title="All">All</a></li>
+            <li><a href="#" title="Branding">Branding</a></li>
+            <li><a href="#" title="Web">Web</a></li>
+            <li><a href="#" title="Photography">Photography</a></li>
+            <li><a href="#" title="App">App</a></li>
+          </ul>
+        </nav>  
+      </div>
+    </div>
+  </header>
+
+  <section class="entry full">
+    <h1>EXPLORE BEYOND HORIZON</h1>
+    <p>Magna mundi referrentur quo, no rebum dignissim qui.<br />
+      Per quodsi accusata id, agam labores.</p>
+    <a href="#">VIEW OUR WORK</a>
+  </section>
+
+  <section class="wrap cuerpo">
+    <div class="full">
+      <button class="columnas" onclick="columnas('3')"><img src="./img/grid1.png"></button>
+      <button class="columnas" onclick="columnas('1')"><img src="./img/grid2.png"></button>
+    </div>
+
+    <div id="BtnContainer" class="BtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">All</button>
+      <button class="btn" onclick="filterSelection('branding')">Branding</button>
+      <button class="btn" onclick="filterSelection('web')">Web</button>
+      <button class="btn" onclick="filterSelection('photography')">Photography</button>
+      <button class="btn" onclick="filterSelection('app')">App</button>
+    </div>
+
+    <div id="load" class="container">
+      <div id="loader" class="loader show"></div>
+    </div>
+    <button class="btn load" onclick="load()">Show Me More</button>
+  </section>
+
+  <footer class="all">
+    <p> © 2016 - <strong>Sneak</strong> All Right Reserved</p>
+    <a href="#" title="facebook"><img src="./img/facebook.svg" alt="facebook"></a>
+    <a href="#" title="twitter"><img src="./img/twitter.svg" alt="twitter"></a>
+    <a href="#" title="dribble"><img src="./img/dribble.svg" alt="dribble"></a>
+    <a href="#" title="youtube"><img src="./img/youtube.svg" alt="youtube"></a>
+  </footer>
+
+  <script src="./js/filtering.js"></script>
+</body>
+</html>

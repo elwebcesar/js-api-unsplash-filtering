@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------------------
+Colores
+------------------------------------------------------------------------- */
+
+$blanco: #FFF;
+$text_color: #707070;
+$rosa: #ff5672;
+
+
+/* ------------------------------------------------------------------------
+Type Styles
+------------------------------------------------------------------------- */
+
+$font_site1: 'Questrial', Arial, Helvetica, sans-serif;
+$font_site2: 'Montserrat', Arial, Helvetica, sans-serif;
+
+
+
+@mixin type-body {
+	font-family: $font_site;
+	line-height: 1.75em;
+	color: $text_color;
+}
+
+@mixin type-default {
+	font-weight: 300;
+}
+
+@mixin type-medium {
+	font-weight: 400;
+}
+
+@mixin type-heavy {
+	font-weight: 600;
+}
+
+@mixin type-heading {
+	font-family: $font_site;
+	@include type-heavy;
+	line-height: 1.25em;
+}
+

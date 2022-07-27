@@ -1,0 +1,83 @@
+.header .wrap{
+    max-width: 1100px;
+}
+.header .full{
+    position: relative;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+}
+.header .wrap img{
+    float: left;
+}
+
+.hamburger-box{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    padding: 0;
+    top: 50%;
+    right: 10px;
+    margin-top: -12px;
+    width: 40px;
+    height: 24px;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: $text_color;
+}
+
+.hamburger-inner:before, .hamburger-inner:after{
+    display: block;
+    content: "";
+    top: 10px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform,opacity;
+}
+
+.hamburger-inner:after{
+    top: 20px;
+    bottom: -10px;
+}
+
+.hamburger-box.active .hamburger-inner{
+    transform: translate3d(0,10px,0) rotate(45deg);
+}
+.hamburger-box.active .hamburger-inner:before{
+	opacity: 0;
+}
+.hamburger-box.active .hamburger-inner:after{
+    transform: translate3d(0,-20px,0) rotate(-90deg);
+}
+
+.header .wrap nav.topnav{
+    float: right;
+    width: calc(100% - 200px);
+    text-align: right;
+}
+.header .wrap nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header .wrap nav ul li{
+    display: contents;
+}
+.header .wrap nav ul a{
+    padding: 7px 15px 5px 15px;
+    color: $text_color;
+    background-color: $blanco;
+}
+.header .wrap nav ul a:hover, .header .wrap nav ul a.active{
+    color: $blanco;
+    background-color: $rosa;
+}
